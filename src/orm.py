@@ -7,10 +7,7 @@ def build_from_record(Class, record):
     return obj
 
 def find_all(Class, cursor):
-    sql_str = f"SELECT * FROM {Class.__table__}"
-    cursor.execute(sql_str)
-    records = cursor.fetchall()
-    return [build_from_record(Class, record) for record in records]
+    pass
 
 def values(obj):
     venue_attrs = obj.__dict__

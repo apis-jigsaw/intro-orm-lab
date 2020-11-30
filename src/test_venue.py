@@ -16,7 +16,6 @@ def test_save_venue(clean_tables):
     venue.__dict__ = {'likes': 12, 'name':'Taco Place', 'price': 1, 'foursquare_id': 'akjklsaj', 'rating': 3, 'menu_url': 'www.foo.com'}
 
     # fill in code here
-    save(venue, test_conn, test_cursor)
 
     test_cursor.execute('SELECT * FROM venues;')
     venue = test_cursor.fetchone()
